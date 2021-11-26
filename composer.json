@@ -1,6 +1,6 @@
 {
     "name": "cspivack/faker-baseball",
-    "description": "Use fakerphp/faker to generate data from Fighting Baseball.",
+    "description": "Use fakerphp/faker to generate data from the Fighting Baseball roster.",
     "type": "library",
     "require": {
         "fakerphp/faker": "^1.9.1",

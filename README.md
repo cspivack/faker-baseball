@@ -7,7 +7,7 @@
 
 
 
-A [Faker](https://github.com/fakerphp/faker) provider that uses the Fighting Baseball (1994) roster to generate names, teams, and positions.
+A [Faker](https://github.com/fakerphp/faker) provider that uses the Fighting Baseball roster to generate names, teams, and positions.
 
 
 ## Installation
