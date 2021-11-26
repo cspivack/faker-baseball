@@ -1,0 +1,33 @@
+{
+    "name": "cspivack/faker-baseball",
+    "description": "Use fakerphp/faker to generate data from Fighting Baseball.",
+    "type": "library",
+    "require": {
+        "fakerphp/faker": "^1.9.1",
+        "php": "^7.1 || ^8.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.3",
+        "phpunit/phpunit": "^9.5"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Cspivack\\Faker\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cspivack\\Faker\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "cspivack",
+            "email": "spivack.craig@gmail.com"
+        }
+    ],
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    }
+}
