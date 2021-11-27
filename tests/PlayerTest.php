@@ -72,4 +72,14 @@ final class PlayerTest extends TestCase
     {
         $this->assertIsBool($this->faker->player()->benched());
     }
+
+    public function testCanReturnStartingPlayer(): void
+    {
+        $this->assertFalse($this->faker->startingPlayer()->benched());
+    }
+
+    public function testCanReturnBenchedPlayer(): void
+    {
+        $this->assertTrue($this->faker->benchedPlayer()->benched());
+    }
 }

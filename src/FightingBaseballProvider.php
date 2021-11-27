@@ -25,6 +25,22 @@ class FightingBaseballProvider extends BaseProvider
         return new Player(static::randomElement(static::$players));
     }
 
+    public function startingPlayer()
+    {
+        static $startingPlayers;
+        $startingPlayers = $startingPlayers ?: array_filter(static::$players, function ($player) { return !$player['bench']; });
+
+        return new Player(static::randomElement($startingPlayers));
+    }
+
+    public function benchedPlayer()
+    {
+        static $benchedPlayers;
+        $benchedPlayers = $benchedPlayers ?: array_filter(static::$players, function ($player) { return $player['bench']; });
+
+        return new Player(static::randomElement($benchedPlayers));
+    }
+
     public function playerPosition()
     {
         return static::randomElement(static::$positions);
