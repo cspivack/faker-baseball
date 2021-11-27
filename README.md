@@ -2,16 +2,10 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/cspivack/faker-baseball/main.svg?style=flat-square)](https://travis-ci.org/cspivack/faker-baseball)
 [![StyleCI](https://styleci.io/repos/432312645/shield)](https://styleci.io/repos/432312645)
-[![Quality Score](https://img.shields.io/scrutinizer/g/cspivack/faker-baseball.svg?style=flat-square)](https://scrutinizer-ci.com/g/cspivack/faker-baseball)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/cspivack/faker-baseball/main.svg?style=flat-square)](https://scrutinizer-ci.com/g/cspivack/faker-baseball/?branch=main)
-
-
 
 A [Faker](https://github.com/fakerphp/faker) provider that uses the Fighting Baseball roster to generate names, teams, and positions.
 
-
 ## Installation
-
 
 Add the Faker Baseball library to your `composer.json` file:
 
@@ -19,8 +13,7 @@ Add the Faker Baseball library to your `composer.json` file:
 composer require cspivack/faker-baseball
 ```
 
-Usage
------
+## Usage
 
 To use this provider with Faker, you must add the provider class to the Faker generator:
 
@@ -44,7 +37,6 @@ $faker->player()->position();  // A player's position
 $faker->player()->benched();   // Whether the player is coming off the bench or not (boolean)
 ```
 
-Tests
------
+## Tests
 
 Run tests with `composer test`
