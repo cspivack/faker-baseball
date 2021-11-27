@@ -9,10 +9,16 @@ final class PlayerTest extends TestCase
 {
     protected $faker;
 
+    const PLAYER = [
+        'first' => 'Bobson',
+        'last'  => 'Dugnutt',
+    ];
+
     public function setUp(): void
     {
         $class = 'Cspivack\\Faker\\FightingBaseballProvider';
         $faker = Factory::create();
+        $faker->seed(210);
         $faker->addProvider(new $class($faker));
 
         $this->faker = $faker;
@@ -41,6 +47,11 @@ final class PlayerTest extends TestCase
     public function testCanReturnPlayerObjectFullName(): void
     {
         $this->assertIsString($this->faker->player()->name());
+    }
+
+    public function testCanReturnPlayerNameMatch(): void
+    {
+        $this->assertSame(static::PLAYER['first'] . ' '. static::PLAYER['last'], $this->faker->player()->name());
     }
 
     public function testCanReturnPlayerObjectToString(): void
