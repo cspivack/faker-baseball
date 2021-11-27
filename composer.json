@@ -14,12 +14,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Cspivack\\Faker\\": "src/"
+            "Faker\\Provider\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Cspivack\\Faker\\Tests\\": "tests/"
+            "Faker\\Tests\\Provider\\": "tests/"
         }
     },
     "authors": [

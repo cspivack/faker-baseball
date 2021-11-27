@@ -1,6 +1,6 @@
 <?php
 
-namespace Cspivack\Faker;
+namespace Faker\Provider;
 
 class Player
 {

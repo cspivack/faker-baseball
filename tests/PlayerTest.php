@@ -1,6 +1,6 @@
 <?php
 
-namespace Cspivack\Faker\Tests;
+namespace Faker\Tests\Provider;
 
 use PHPUnit\Framework\TestCase;
 use Faker\Factory;
@@ -16,7 +16,7 @@ final class PlayerTest extends TestCase
 
     public function setUp(): void
     {
-        $class = 'Cspivack\\Faker\\FightingBaseballProvider';
+        $class = 'Faker\\Provider\\FightingBaseballProvider';
         $faker = Factory::create();
         $faker->seed(210);
         $faker->addProvider(new $class($faker));
@@ -41,7 +41,7 @@ final class PlayerTest extends TestCase
 
     public function testCanReturnPlayerObject(): void
     {
-        $this->assertInstanceOf(\Cspivack\Faker\Player::class, $this->faker->player());
+        $this->assertInstanceOf(\Faker\Provider\Player::class, $this->faker->player());
     }
 
     public function testCanReturnPlayerObjectFullName(): void

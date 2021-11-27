@@ -21,7 +21,7 @@ To use this provider with Faker, you must add the provider class to the Faker ge
 <?php
 
 $faker = \Faker\Factory::create();
-$faker->addProvider(new \Cspivack\Faker\FightingBaseballProvider($faker));
+$faker->addProvider(new \Faker\Provider\FightingBaseballProvider($faker));
 
 /* General data */
 $faker->playerName();          // A name using random first and last names
@@ -44,7 +44,7 @@ public function register()
 {
     $this->app->singleton(Generator::class, function () {
         $faker = Factory::create();
-        $faker->addProvider(new \Cspivack\Faker\FightingBaseballProvider($faker));
+        $faker->addProvider(new \Faker\Provider\FightingBaseballProvider($faker));
         return $faker;
     });
 }
