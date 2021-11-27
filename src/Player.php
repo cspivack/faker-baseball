@@ -4,6 +4,8 @@ namespace Cspivack\Faker;
 
 class Player
 {
+    protected $data = [];
+
     public function __construct(array $data)
     {
         $this->data = $data;
