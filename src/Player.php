@@ -23,7 +23,7 @@ class Player
 
     public function lastName(): string
     {
-        return $this->data['first'];
+        return $this->data['last'];
     }
 
     public function team(): string
