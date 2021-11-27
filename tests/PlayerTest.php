@@ -9,7 +9,7 @@ final class PlayerTest extends TestCase
 {
     protected $faker;
 
-    const PLAYER = [
+    public const PLAYER = [
         'first' => 'Bobson',
         'last'  => 'Dugnutt',
     ];
@@ -51,7 +51,7 @@ final class PlayerTest extends TestCase
 
     public function testCanReturnPlayerNameMatch(): void
     {
-        $this->assertSame(static::PLAYER['first'] . ' '. static::PLAYER['last'], $this->faker->player()->name());
+        $this->assertSame(static::PLAYER['first'] . ' ' . static::PLAYER['last'], $this->faker->player()->name());
     }
 
     public function testCanReturnPlayerObjectToString(): void

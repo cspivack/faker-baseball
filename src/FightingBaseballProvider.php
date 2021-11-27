@@ -28,7 +28,9 @@ class FightingBaseballProvider extends BaseProvider
     public function startingPlayer()
     {
         static $startingPlayers;
-        $startingPlayers = $startingPlayers ?: array_filter(static::$players, function ($player) { return !$player['bench']; });
+        $startingPlayers = $startingPlayers ?: array_filter(static::$players, function ($player) {
+            return !$player['bench'];
+        });
 
         return new Player(static::randomElement($startingPlayers));
     }
@@ -36,7 +38,9 @@ class FightingBaseballProvider extends BaseProvider
     public function benchedPlayer()
     {
         static $benchedPlayers;
-        $benchedPlayers = $benchedPlayers ?: array_filter(static::$players, function ($player) { return $player['bench']; });
+        $benchedPlayers = $benchedPlayers ?: array_filter(static::$players, function ($player) {
+            return $player['bench'];
+        });
 
         return new Player(static::randomElement($benchedPlayers));
     }
