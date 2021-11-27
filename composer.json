@@ -8,7 +8,8 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.3",
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^1.2"
     },
     "license": "MIT",
     "autoload": {
@@ -29,6 +30,7 @@
     ],
     "scripts": {
         "test": "./vendor/bin/phpunit",
-        "cs": "./vendor/bin/php-cs-fixer fix"
+        "cs": "./vendor/bin/php-cs-fixer fix",
+        "phpstan": "vendor/bin/phpstan analyse src --level=5"
     }
 }
