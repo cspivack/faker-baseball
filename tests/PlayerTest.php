@@ -93,4 +93,19 @@ final class PlayerTest extends TestCase
     {
         $this->assertTrue($this->faker->benchedPlayer()->benched());
     }
+
+    public function testPlayerEmail(): void
+    {
+        $this->assertSame('bobson.dugnutt@dugnutt.com', $this->faker->player()->email());
+    }
+
+    public function testPlayerSafeEmail(): void
+    {
+        $this->assertSame('bobson.dugnutt@example.org', $this->faker->player()->safeEmail());
+    }
+
+    public function testPlayerFreeEmail(): void
+    {
+        $this->assertSame('bobson.dugnutt@yahoo.com', $this->faker->player()->freeEmail());
+    }
 }

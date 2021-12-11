@@ -14,7 +14,7 @@ class FightingBaseballProvider extends BaseProvider
 
     public function player()
     {
-        return new Player(static::randomElement(PlayerData::getPlayers()));
+        return new Player($this->generator, static::randomElement(PlayerData::getPlayers()));
     }
 
     public function startingPlayer()
@@ -24,7 +24,7 @@ class FightingBaseballProvider extends BaseProvider
             return !$player['bench'];
         });
 
-        return new Player(static::randomElement($startingPlayers));
+        return new Player($this->generator, static::randomElement($startingPlayers));
     }
 
     public function benchedPlayer()
@@ -34,7 +34,7 @@ class FightingBaseballProvider extends BaseProvider
             return $player['bench'];
         });
 
-        return new Player(static::randomElement($benchedPlayers));
+        return new Player($this->generator, static::randomElement($benchedPlayers));
     }
 
     public function playerPosition()
