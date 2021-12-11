@@ -9,8 +9,7 @@ class Player
 
     public function __construct(\Faker\Generator $generator, array $data)
     {
-        $provider = new class($generator) extends \Faker\Provider\Person
-        {
+        $provider = new class ($generator) extends \Faker\Provider\Person {
             public static function setName(array $data)
             {
                 static::$firstNameMale = [$data['first']];
@@ -42,7 +41,7 @@ class Player
 
     public function __toString(): string
     {
-        return $this->name();
+        return $this->generator->format('name');
     }
 
     /**
@@ -54,6 +53,5 @@ class Player
         if (in_array($method, ['name', 'firstName', 'lastName', 'email', 'safeEmail', 'freeEmail'])) {
             return $this->generator->format($method, $attributes);
         }
-
     }
 }
