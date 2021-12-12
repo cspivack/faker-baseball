@@ -9,15 +9,7 @@ class Player
 
     public function __construct(\Faker\Generator $generator, array $data)
     {
-        $provider = new class ($generator) extends \Faker\Provider\Person {
-            public static function setName(array $data)
-            {
-                static::$firstNameMale = [$data['first']];
-                static::$firstNameFemale = [$data['first']];
-                static::$lastName = [$data['last']];
-            }
-        };
-        $provider::setName($data);
+        $provider = PlayerPerson::make($generator, $data);
         $generator->addProvider($provider);
 
         $this->generator = $generator;
