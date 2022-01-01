@@ -56,7 +56,4 @@ Run tests with `composer test` and run static analyis with `composer phpstan`.
 
 ## Roadmap
 
-- [ ] Add changelog
-- [ ] Add contributing information
-- [x] Add support for email addresses using player names
 - [ ] Add support for team/player relationships (getting a list of all players on a particular team, getting a player's teammates, etc.)
