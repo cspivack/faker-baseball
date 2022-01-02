@@ -1,6 +1,6 @@
 # Faker Baseball :baseball:
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/cspivack/faker-baseball/main.svg?style=flat-square)](https://travis-ci.org/cspivack/faker-baseball)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE.md)
+[![Build Status](https://github.com/cspivack/faker-baseball/actions/workflows/tests.yml/badge.svg)](https://github.com/cspivack/faker-baseball/actions/workflows/tests.yml)
 [![StyleCI](https://styleci.io/repos/432312645/shield)](https://styleci.io/repos/432312645)
 
 A [Faker](https://github.com/fakerphp/faker) provider that uses the Fighting Baseball roster to generate names, teams, and positions.
